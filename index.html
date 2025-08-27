@@ -1,0 +1,287 @@
+<html>
+    <title></title>
+    <head>
+        
+        <script>
+            function myfunction(){
+                document.getElementById("image").innerHTML='<img src="imagess/bulboff.jpg" width="300">'
+            }
+ 
+        </script> 
+        <script>
+document.getElementById("bookNowBtn").addEventListener("click", function () {
+  const toast = document.getElementById("toast");
+  toast.classList.add("show");
+
+  // Hide the toast after 2 seconds
+  setTimeout(() => {
+    toast.classList.remove("show");
+    // Redirect after toast disappears
+    window.location.href = "enquiry.html";
+  }, 2000);
+});
+</script>
+        <style>
+/* Book Now Button - Top Left Corner */
+#bookNowBtn {
+  
+  top: 15px;
+  left: 15px;
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#bookNowBtn:hover {
+  background-color: #03925e;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Toast Message */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin: 10px auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 12px;
+  position: fixed;
+  top: 70px;
+  left: 15px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+        </style>
+   
+    </head>
+
+
+    <body>
+        <button id="bookNowBtn">Book Now</button>
+<div id="toast" class="toast">Your journey begins now! ✨ Fill in.</div>
+
+
+
+        <h1>learning Javascript</h1>
+
+        <p>Turning on a light</p>
+        <div id="image"></div>
+        <button>Turn on the light</button>
+
+        <img id="images" src="imagess/bulbon.jpg" width="300">
+
+        <button onclick="myfunction()">Turn off the light</button>       
+        <a href="https://wa.me/27123456789" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50">
+        </a>
+                    <div id="googleMap" style="width:100%;height:300px;"></div>
+            <script>
+                function myMap() {
+                  // Coordinates for Polokwane, South Africa
+                  var polokwane = { lat: -23.9045, lng: 29.4689 };
+              
+                  // Create map centered on Polokwane
+                  var map = new google.maps.Map(document.getElementById("googleMap"), {
+                    center: polokwane,
+                    zoom: 12,
+                  });
+              
+                  // Add a marker
+                  var marker = new google.maps.Marker({
+                    position: polokwane,
+                    map: map,
+                    title: "Polokwane",
+                  });
+              
+                  // Info window for the marker
+                  var infoWindow = new google.maps.InfoWindow({
+                    content: "<h3>Polokwane</h3><p>Welcome to Polokwane, South Africa!</p>",
+                  });
+              
+                  // Open info window when marker is clicked
+                  marker.addListener("click", function () {
+                    infoWindow.open(map, marker);
+                  });
+              
+                  // Optional: Add markers on map click
+                  map.addListener("click", function (e) {
+                    new google.maps.Marker({
+                      position: e.latLng,
+                      map: map,
+                    });
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOaRpMT-ITMuE_fOXG4ciW4eVDOTQO7j4&callback=myMap"></script>
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 25%;
+}
+.column {
+  float: left;
+  width: 25%;
+}
+.column {
+  float: left;
+  width: 25%;
+}
+.column {
+  float: left;
+  width: 25%;
+}
+.column {
+  float: left;
+  width: 25%;
+}
+modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10px;
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 10%;
+  overflow: auto;
+  background-color: black;
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10;
+  width: 10%;
+  max-width: 10px;
+}
+
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+ border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    </body>
+
+
+
+</html>
